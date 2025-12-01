@@ -150,6 +150,7 @@ if __name__ == "__main__":
                     mutate_gaussian(
                         std=mutate_std, bounds=(-1, 1), expected_num_mutations=1
                     ),
+                    ops.UniformCrossover(p_swap=0.1),
                     # Replace ops.evaluate with synchronous.eval_pool
                     # This distributes fitness evaluations across dask workers
                     # and waits for all to complete before continuing
